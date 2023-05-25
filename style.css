@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(88, 88, 252);
+    height: 100vh;
+    display: flex;
+}
+
+main{
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    background-color: bisque;
+    padding: 4rem 1rem 0;
+    text-align: center;
+    border-radius: 2rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    color: rgb(88, 88, 252);
+}
+
+p#counter{
+    margin-top: 5rem;
+    font-size: 2rem;
+    color: royalblue;
+}
