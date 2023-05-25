@@ -30,6 +30,9 @@ h1{
 
 p#counter{
     margin-top: 5rem;
+}
+
+P{
     font-size: 2rem;
     color: royalblue;
 }
