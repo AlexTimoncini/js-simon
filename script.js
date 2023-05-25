@@ -30,11 +30,15 @@ function countdown(finalDate, daysCounter, hoursCounter, minutesCounter, seconds
 
 const background = document.getElementById('background-wrapper');
 
-setInterval(backgroundAnimation, 4500, 'div', 'duck', background, 4500);
+for (let i = 0; i < 20; i++){
+    setTimeout(setInterval, (Math.random() * 20000), backgroundAnimation, 4500, 'div', 'duck', background, 4500, `${Math.random() * 90}%`);
+}
+
     
-function backgroundAnimation(htmlTag, elementClass, parent, animationMs){
+function backgroundAnimation(htmlTag, elementClass, parent, animationMs, position){
     let elementDom = document.createElement(htmlTag);
     elementDom.classList.add(elementClass);
+    elementDom.style.left = position;
     parent.appendChild(elementDom);
     setTimeout(function(){
         elementDom.remove();

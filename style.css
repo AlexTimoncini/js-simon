@@ -52,7 +52,6 @@ div.duck{
     position: absolute;
     animation: spinMove 4500ms linear;
     z-index: -1;
-    left: 50%;
 }
 
 @keyframes spinMove {
