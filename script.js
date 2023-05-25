@@ -7,7 +7,6 @@ const nextLessonDate = new Date('May 26, 2023 09:30:00');
 countdown(nextLessonDate, daysDom, hoursDom, minutesDom, secondsDom);
 
 function countdown(finalDate, daysCounter, hoursCounter, minutesCounter, secondsCounter){
-
     const liveCountdown = setInterval(timeCalc, 1000, finalDate, daysCounter, hoursCounter, minutesCounter, secondsCounter);
 
     function timeCalc(finalDate, daysCounter, hoursCounter, minutesCounter, secondsCounter){
@@ -27,4 +26,17 @@ function countdown(finalDate, daysCounter, hoursCounter, minutesCounter, seconds
         }
     }
 
-}
+};
+
+const background = document.getElementById('background-wrapper');
+
+setInterval(backgroundAnimation, 4500, 'div', 'duck', background, 4500);
+    
+function backgroundAnimation(htmlTag, elementClass, parent, animationMs){
+    let elementDom = document.createElement(htmlTag);
+    elementDom.classList.add(elementClass);
+    parent.appendChild(elementDom);
+    setTimeout(function(){
+        elementDom.remove();
+    }, animationMs);
+};
